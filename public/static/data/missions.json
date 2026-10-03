@@ -1,0 +1,321 @@
+{
+  "_readme": {
+    "what_is_this": "Mission facts for Robo Pet Station. Teachers and developers can edit this file to add or change hardware. Every fact here is shown to kids, so please keep it accurate and kid-friendly.",
+    "how_to_add_hardware": [
+      "1. Copy one whole block inside 'hardware' (from '{' to '}').",
+      "2. Give it a new unique 'id' (lowercase, no spaces, e.g. 'curiosity').",
+      "3. Fill in every field. Keep sentences short (ages 7-12).",
+      "4. 'base_shape' must be one of: rover6, rover4, buggy, copter, probe, lander. This picks the robo pet body drawing.",
+      "5. Save the file and reload the page. No rebuild needed.",
+      "6. Keep 'facts' to 3-5 items. These become the clickable fact chips kids insert into postcards."
+    ],
+    "reading_level_tip": "Aim for short sentences and everyday words. Put any hard word into the 'glossary' section at the bottom so kids can tap it.",
+    "sources_checked": "Facts verified against science.nasa.gov, jpl.nasa.gov and NASA mission pages.",
+    "last_fact_check": "2026-10-03"
+  },
+
+  "hardware": [
+    {
+      "id": "lunar_rover",
+      "name": "Apollo Lunar Roving Vehicle",
+      "nickname": "The Moon Buggy",
+      "base_shape": "buggy",
+      "emoji": "🌙",
+      "place": "Moon",
+      "location_detail": "Taurus-Littrow Valley, the Moon",
+      "launched": "December 7, 1972 (the Apollo 17 rover)",
+      "arrived": "December 11, 1972",
+      "mission_ended": "December 14, 1972",
+      "status": "retired",
+      "status_label": "Parked on the Moon forever",
+      "status_kid": "It is still parked on the Moon right where the astronauts left it. Nobody has driven it since 1972.",
+      "one_liner": "The first car humans ever drove on another world.",
+      "where_am_i": "I am parked in a valley on the Moon called Taurus-Littrow. There is no wind and no rain here, so my tire tracks are still in the dust.",
+      "what_i_did": "Three of us moon buggies were carried to the Moon on Apollo 15, 16 and 17. Astronauts drove us so they could explore much farther from their landing craft than they could walk.",
+      "what_i_discovered": "I carried astronauts to rocks they could never have reached on foot. On Apollo 17 the crew found orange soil at Shorty Crater, which told scientists about ancient volcanoes on the Moon.",
+      "facts": [
+        "I was an electric car, powered by batteries, not gasoline.",
+        "My top speed was about 8 miles per hour (13 kilometers per hour) - slower than a bicycle going downhill.",
+        "The Apollo 17 crew drove me about 22 miles (36 kilometers) in total.",
+        "My wheels were made of woven piano wire instead of rubber, because rubber would crack in the Moon's cold.",
+        "I folded up like a piece of origami to fit on the side of the landing craft."
+      ],
+      "did_you_know": "On Apollo 17, astronaut Gene Cernan accidentally snapped off part of my fender. The crew fixed it with duct tape and maps so Moon dust would stop spraying over everything. Space repairs with tape really happened!",
+      "feelings_hint": "You were the first car on another world. You carried people who laughed and sang while they drove you.",
+      "pet_personality": "proud and bouncy",
+      "theme_color": "#c8a24a"
+    },
+
+    {
+      "id": "sojourner",
+      "name": "Sojourner",
+      "nickname": "The Little Trailblazer",
+      "base_shape": "rover6",
+      "emoji": "🥇",
+      "place": "Mars",
+      "location_detail": "Ares Vallis, Mars",
+      "launched": "December 4, 1996",
+      "arrived": "July 4, 1997",
+      "mission_ended": "Last contact September 27, 1997",
+      "status": "silent",
+      "status_kid": "I stopped sending messages in 1997. I am still sitting on Mars near the lander that carried me.",
+      "status_label": "Silent on Mars since 1997",
+      "one_liner": "The first rover to ever drive on Mars.",
+      "where_am_i": "I am on a rocky flood plain on Mars called Ares Vallis, close to my lander. The lander was named the Carl Sagan Memorial Station.",
+      "what_i_did": "I was the very first rover to drive on Mars. I was a test to prove that a little robot on wheels could explore another planet. I studied rocks with a special instrument that could tell what they were made of.",
+      "what_i_discovered": "I found that some Martian rocks looked like rocks made by volcanoes on Earth, and that rounded pebbles were there too. Pebbles like that are usually shaped by running water, which hinted that Mars once had floods.",
+      "facts": [
+        "I was only about the size of a microwave oven and weighed about 23 pounds (10.6 kilograms).",
+        "My mission was planned to last 7 days, but I kept working for 83 days - almost 12 times longer!",
+        "I drove only about 100 meters in my whole life, about the length of a running track.",
+        "I never went farther than about 12 meters from my lander, because that was as far as my radio could reach.",
+        "I was named after Sojourner Truth, a brave American woman who spoke up for freedom and equal rights."
+      ],
+      "did_you_know": "Scientists gave the rocks around me funny nicknames like 'Barnacle Bill', 'Yogi' and 'Scooby Doo' so the team could talk about them easily. Naming rocks is a real part of space science!",
+      "feelings_hint": "You were small, you were first, and you proved that little robots can do big things.",
+      "pet_personality": "brave and curious",
+      "theme_color": "#e07a3f"
+    },
+
+    {
+      "id": "spirit",
+      "name": "Spirit",
+      "nickname": "The Hill Climber",
+      "base_shape": "rover6",
+      "emoji": "⛰️",
+      "place": "Mars",
+      "location_detail": "Gusev Crater, Mars (a spot the team named 'Troy')",
+      "launched": "June 10, 2003",
+      "arrived": "January 4, 2004",
+      "mission_ended": "Last message March 22, 2010",
+      "status": "silent",
+      "status_kid": "I got stuck in soft sand and my batteries ran low. I sent my last message in March 2010 and have been quiet ever since.",
+      "status_label": "Stuck and silent on Mars since 2010",
+      "one_liner": "A rover built for 90 days that explored Mars for over 6 years.",
+      "where_am_i": "I am inside a huge bowl-shaped dent in Mars called Gusev Crater. My wheels are sunk into soft, powdery soil at a place my team nicknamed 'Troy'.",
+      "what_i_did": "I rolled across Mars taking pictures, grinding into rocks, and testing what the soil was made of. I even climbed a hill called Husband Hill - the first rover to climb a hill on another planet.",
+      "what_i_discovered": "At a place called Home Plate I found soil that was almost pure silica. On Earth, that kind of material forms in hot springs or steam vents. That was a big clue that Mars once had hot water - and hot water is a place where life can live.",
+      "facts": [
+        "My mission was only supposed to last 90 days, but I worked for more than 6 years.",
+        "I drove 4.8 miles (7.73 kilometers) across Mars.",
+        "One of my six wheels broke and stopped turning, so I had to drive backwards, dragging it behind me.",
+        "That broken wheel accidentally scraped the soil and uncovered the bright silica that became my biggest discovery.",
+        "I was the twin sister of another rover named Opportunity, which landed on the other side of Mars."
+      ],
+      "did_you_know": "My broken wheel turned out to be lucky. Because I had to drag it, it dug a trench in the dirt and exposed the hidden bright soil underneath. Sometimes a problem leads to a discovery!",
+      "feelings_hint": "You were stuck, but before that you climbed a hill no robot had ever climbed.",
+      "pet_personality": "determined and tough",
+      "theme_color": "#d2553c"
+    },
+
+    {
+      "id": "opportunity",
+      "name": "Opportunity",
+      "nickname": "The Marathon Runner",
+      "base_shape": "rover6",
+      "emoji": "🏃",
+      "place": "Mars",
+      "location_detail": "Perseverance Valley, on the rim of Endeavour Crater, Mars",
+      "launched": "July 7, 2003",
+      "arrived": "January 25, 2004",
+      "mission_ended": "Last signal June 10, 2018",
+      "status": "silent",
+      "status_label": "Silent on Mars since 2018",
+      "status_kid": "A giant dust storm blocked the sunlight my solar panels needed. My last signal came on June 10, 2018, and I have been asleep ever since.",
+      "one_liner": "The rover that drove a marathon on another planet.",
+      "where_am_i": "I am parked in a place called Perseverance Valley, on the edge of a big crater named Endeavour Crater on Mars.",
+      "what_i_did": "I drove across a flat Martian plain called Meridiani Planum for almost 15 years, stopping at craters along the way to look at the layers of rock inside them, like reading the pages of a book.",
+      "what_i_discovered": "I found tiny round pebbles that scientists nicknamed 'blueberries', made of a mineral that usually forms in water. I also found a mineral called hematite. Together they proved that liquid water once soaked this part of Mars.",
+      "facts": [
+        "Like my twin Spirit, I was built for a 90-day mission - but I worked for almost 15 years.",
+        "I drove 28.06 miles (45.16 kilometers), which is farther than a marathon race.",
+        "Sometimes gusts of wind blew the dust off my solar panels and gave me fresh power. The team called them 'cleaning events'.",
+        "I sent back more than 217,000 pictures of Mars.",
+        "The last thing I measured was the sky getting dark as the dust storm rolled in."
+      ],
+      "did_you_know": "People sometimes say my last message was 'My battery is low and it's getting dark.' I did not really write those words - I sent numbers, not sentences. A scientist translated my data into that sentence because it captured exactly what my readings meant.",
+      "feelings_hint": "You ran a marathon on Mars. You lasted 60 times longer than anyone planned.",
+      "pet_personality": "cheerful and tireless",
+      "theme_color": "#3f7ae0"
+    },
+
+    {
+      "id": "ingenuity",
+      "name": "Ingenuity",
+      "nickname": "The Little Flyer",
+      "base_shape": "copter",
+      "emoji": "🚁",
+      "place": "Mars",
+      "location_detail": "Near Valinor Hills in Jezero Crater, Mars",
+      "launched": "July 30, 2020",
+      "arrived": "February 18, 2021",
+      "mission_ended": "Final flight January 18, 2024; mission ended January 25, 2024",
+      "status": "grounded",
+      "status_label": "Grounded on Mars, still a weather station",
+      "status_kid": "I broke the tips of my rotor blades on my last landing, so I can never fly again. I am standing still on Mars, but I can still collect a little weather data.",
+      "one_liner": "The first machine ever to fly on another planet.",
+      "where_am_i": "I am standing on the sand of Jezero Crater on Mars, near a spot called Valinor Hills, where I made my last landing.",
+      "what_i_did": "I was a test to see if a helicopter could fly in the thin Martian air. After I proved it worked, I became a scout, flying ahead of the Perseverance rover to photograph the ground and help the team pick safe paths.",
+      "what_i_discovered": "I proved that powered flight is possible on another planet. Before me, nobody knew for sure if a helicopter could get off the ground in air that thin. Now engineers are designing bigger flying robots for Mars.",
+      "facts": [
+        "Mars air is about 100 times thinner than Earth's, so my blades had to spin about 2,500 times a minute - much faster than a helicopter on Earth.",
+        "I was planned to make just 5 flights in 30 days. I made 72 flights over almost 3 years!",
+        "I flew for about 2 hours and 9 minutes in total and travelled about 11 miles (17 kilometers).",
+        "My highest flight took me 24 meters up, about as high as an 8-story building.",
+        "I carried a tiny piece of fabric from the 1903 Wright brothers' airplane, the first plane to fly on Earth."
+      ],
+      "did_you_know": "I had to survive freezing Martian nights of about -90°C (-130°F). Every night I used my own little heater to keep my electronics warm, and every morning my solar panel charged me back up so I could fly again.",
+      "feelings_hint": "You flew where nothing had ever flown. Now you rest, but you showed the way for every Mars flyer after you.",
+      "pet_personality": "playful and daring",
+      "theme_color": "#8e6ad6"
+    },
+
+    {
+      "id": "voyager1",
+      "name": "Voyager 1",
+      "nickname": "The Far Traveller",
+      "base_shape": "probe",
+      "emoji": "🛰️",
+      "place": "Deep space",
+      "location_detail": "Interstellar space, beyond our Sun's bubble",
+      "launched": "September 5, 1977",
+      "arrived": "Still travelling - it never stops",
+      "mission_ended": "Still working today",
+      "status": "travelling",
+      "status_label": "Still flying and still talking to Earth",
+      "status_kid": "I am still working! I am the farthest human-made object in the universe, and I still send faint signals home - though they take more than 22 hours to arrive.",
+      "one_liner": "The farthest thing humans have ever sent away from Earth.",
+      "where_am_i": "I am in interstellar space - the space between the stars. I have flown out past the giant bubble of particles our Sun blows around itself.",
+      "what_i_did": "I flew past Jupiter and Saturn and sent home the first close-up pictures of their moons and rings. Then I just kept going, out of the solar system and into the space between stars.",
+      "what_i_discovered": "I discovered erupting volcanoes on Jupiter's moon Io - the first active volcanoes ever found anywhere besides Earth. I also found new rings and new moons, and in 2012 I became the first spacecraft to cross into interstellar space.",
+      "facts": [
+        "I launched in 1977, before most of your teachers were born.",
+        "I entered interstellar space in August 2012.",
+        "I am so far away that my radio signal takes more than 22 hours to reach Earth, even travelling at the speed of light.",
+        "In November 2026 I became the first spacecraft to be a full light-day away from Earth - about 25.9 billion kilometers.",
+        "My computer has less memory than a simple pocket calculator, and it has been running for almost 50 years."
+      ],
+      "did_you_know": "I carry a golden record - a gold-plated disc with greetings in 55 languages, sounds of Earth like rain and a baby laughing, and 115 pictures. If anyone ever finds me, it is a message that says: we were here, and this is what we loved.",
+      "feelings_hint": "You were never left behind - you chose to keep going. You are the loneliest and bravest traveller we ever built.",
+      "pet_personality": "calm and wise",
+      "theme_color": "#2fb5a8"
+    }
+  ],
+
+  "glossary": [
+    { "word": "rover", "kid_definition": "A robot on wheels that drives around on another planet or moon and does science." },
+    { "word": "probe", "kid_definition": "A robot spacecraft sent far away to study space. It does not land - it flies past or keeps going." },
+    { "word": "lander", "kid_definition": "A spacecraft built to land gently on a planet or moon and then stay in one place." },
+    { "word": "crater", "kid_definition": "A big bowl-shaped dent in the ground, usually made when a space rock crashed into it." },
+    { "word": "solar panel", "kid_definition": "A flat black panel that turns sunlight into electricity to power a robot." },
+    { "word": "rotor", "kid_definition": "The spinning blades on top of a helicopter that lift it into the air." },
+    { "word": "silica", "kid_definition": "A mineral found in sand and glass. On Mars it is exciting because it often forms in hot water." },
+    { "word": "hematite", "kid_definition": "A reddish mineral made of iron. On Earth it usually forms in water, so finding it on Mars was a big clue." },
+    { "word": "interstellar space", "kid_definition": "The space between the stars, outside the bubble our Sun makes around itself." },
+    { "word": "sol", "kid_definition": "One day on Mars. It is a little longer than a day on Earth - about 24 hours and 37 minutes." },
+    { "word": "dust storm", "kid_definition": "A giant storm of dust that can cover a whole planet and block the sunlight." },
+    { "word": "mission", "kid_definition": "The job a spacecraft is sent to do, like exploring a planet or taking pictures." },
+    { "word": "orbit", "kid_definition": "The curved path something takes when it travels around a planet, moon, or star." },
+    { "word": "golden record", "kid_definition": "A gold disc on the Voyager spacecraft with sounds and pictures of Earth, in case someone out there finds it." },
+    { "word": "retired", "kid_definition": "When a robot's job is finished and it stops working, on purpose." },
+    { "word": "silent", "kid_definition": "When a robot stops sending messages home, so we cannot hear from it anymore." }
+  ],
+
+  "builder_options": {
+    "bodies": [
+      { "id": "boxy", "label": "Boxy", "emoji": "📦" },
+      { "id": "round", "label": "Round", "emoji": "⚪" },
+      { "id": "tall", "label": "Tall", "emoji": "🏢" },
+      { "id": "flat", "label": "Flat", "emoji": "🛹" }
+    ],
+    "movers": [
+      { "id": "wheels6", "label": "6 Wheels", "emoji": "🛞" },
+      { "id": "wheels4", "label": "4 Big Wheels", "emoji": "🚙" },
+      { "id": "tracks", "label": "Tank Tracks", "emoji": "🚜" },
+      { "id": "legs", "label": "Legs", "emoji": "🦿" },
+      { "id": "rotors", "label": "Rotors", "emoji": "🚁" },
+      { "id": "thrusters", "label": "Thrusters", "emoji": "🔥" }
+    ],
+    "colors": [
+      { "id": "mars_red", "label": "Mars Red", "hex": "#e05c3f" },
+      { "id": "moon_gray", "label": "Moon Gray", "hex": "#b9bec9" },
+      { "id": "sky_blue", "label": "Sky Blue", "hex": "#3f9ce0" },
+      { "id": "nebula_purple", "label": "Nebula Purple", "hex": "#9a62d8" },
+      { "id": "star_gold", "label": "Star Gold", "hex": "#e8b23f" },
+      { "id": "alien_green", "label": "Alien Green", "hex": "#4fc97a" },
+      { "id": "rocket_white", "label": "Rocket White", "hex": "#f2f4f8" },
+      { "id": "deep_teal", "label": "Deep Teal", "hex": "#2fb5a8" }
+    ],
+    "antennas": [
+      { "id": "dish", "label": "Big Dish", "emoji": "📡" },
+      { "id": "whip", "label": "Whip Antenna", "emoji": "〰️" },
+      { "id": "double", "label": "Double Ears", "emoji": "🐰" },
+      { "id": "none", "label": "No Antenna", "emoji": "🚫" }
+    ],
+    "tools": [
+      { "id": "drill", "label": "Rock Drill", "emoji": "🪛" },
+      { "id": "arm", "label": "Grabber Arm", "emoji": "🦾" },
+      { "id": "camera", "label": "Camera Mast", "emoji": "📷" },
+      { "id": "scoop", "label": "Soil Scoop", "emoji": "🥄" },
+      { "id": "lab", "label": "Mini Lab", "emoji": "🧪" }
+    ],
+    "eyes": [
+      { "id": "happy", "label": "Happy", "emoji": "😊" },
+      { "id": "big", "label": "Big Eyes", "emoji": "👀" },
+      { "id": "sleepy", "label": "Sleepy", "emoji": "😴" },
+      { "id": "visor", "label": "Visor", "emoji": "🥽" },
+      { "id": "one", "label": "One Big Eye", "emoji": "🔵" },
+      { "id": "star", "label": "Star Eyes", "emoji": "🤩" }
+    ]
+  },
+
+  "prompts": {
+    "postcard": [
+      { "id": "where", "question": "Where am I?", "starters": ["I am sitting on...", "My home now is...", "All around me I can see..."] },
+      { "id": "saw", "question": "What did I see?", "starters": ["The most amazing thing I saw was...", "I will never forget when I saw...", "Out of my camera I watched..."] },
+      { "id": "learned", "question": "What did I help scientists learn?", "starters": ["Because of me, scientists know that...", "I helped people on Earth discover...", "My biggest discovery was..."] },
+      { "id": "feel", "question": "How do I feel being left behind?", "starters": ["Being here all alone makes me feel...", "I do not mind staying because...", "Sometimes I feel... but mostly I feel..."] }
+    ],
+    "decisions": [
+      {
+        "id": "museum",
+        "label": "Bring it home to a museum",
+        "emoji": "🏛️",
+        "stamp": "RESCUE",
+        "example_reasons": [
+          "Kids on Earth could see it in person and learn from it.",
+          "It is a piece of history, like a dinosaur bone.",
+          "It would be safe from dust storms and never rust away."
+        ]
+      },
+      {
+        "id": "historic",
+        "label": "Leave it as a historic site",
+        "emoji": "🚩",
+        "stamp": "PROTECT",
+        "example_reasons": [
+          "This is exactly where it made history, so it belongs here.",
+          "Future explorers could visit it like a monument.",
+          "Moving it might break it, and it has earned its rest."
+        ]
+      },
+      {
+        "id": "newjob",
+        "label": "Give it a new job",
+        "emoji": "🔧",
+        "stamp": "REBOOT",
+        "example_reasons": [
+          "Its parts still work, so it could be a weather station.",
+          "It could be a radio relay to help new robots talk to Earth.",
+          "Reusing it saves having to launch something brand new."
+        ]
+      }
+    ],
+    "risk_starters": [
+      "One problem could be...",
+      "It might be hard because...",
+      "A risk I thought about is...",
+      "This could go wrong if..."
+    ]
+  }
+}
