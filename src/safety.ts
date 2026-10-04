@@ -40,11 +40,26 @@ const LEET_MAP: Record<string, string> = {
   '@': 'a', '$': 's', '!': 'i', '|': 'i', '+': 't',
 }
 
-/** Normalise text so simple disguises ("f*ck", "sh1t", "fuuuck") still match. */
+/**
+ * Normalise text so simple disguises ("f*ck", "sh1t", "fuuuck") still match.
+ *
+ * Important: digits are only de-leeted when they sit INSIDE a word (letters on
+ * at least one side). Kids write about real numbers constantly - "45 kilometers",
+ * "72 flights", "1977" - and blindly mapping 4 -> a turned "45" into "as", which
+ * then tripped the filter. Standalone numbers are left completely alone.
+ */
 function normalise(input: string): string {
   let s = input.toLowerCase()
-  // Map leet characters to letters.
-  s = s.replace(/[01345789@$!|+]/g, (ch) => LEET_MAP[ch] ?? ch)
+
+  // De-leet only digits/symbols that are adjacent to a letter.
+  s = s.replace(/[01345789@$!|+]/g, (ch, idx: number, whole: string) => {
+    const prev = whole[idx - 1]
+    const next = whole[idx + 1]
+    const letter = /[a-z]/
+    const touchesLetter = (prev && letter.test(prev)) || (next && letter.test(next))
+    return touchesLetter ? LEET_MAP[ch] ?? ch : ch
+  })
+
   // Drop characters commonly used to break up words.
   s = s.replace(/[*._\-~^"'`()\[\]{}<>\/\\]/g, '')
   // Collapse 3+ repeats of a letter down to 2 ("fuuuuck" -> "fuuck").
@@ -52,7 +67,47 @@ function normalise(input: string): string {
   return s
 }
 
-/** Collapse ALL repeats so "fuuck" -> "fuck" for a second matching pass. */
+/** Placeholder standing in for a character the writer masked out. */
+const MASK = '\u0001'
+
+/**
+ * Variant of the text where symbols used to self-censor a word ("f*ck", "sh#t",
+ * "b00b") become a wildcard instead of being deleted. Deleting them made "f*ck"
+ * collapse to "fck", which matched nothing.
+ */
+function maskVariant(input: string): string {
+  let s = input.toLowerCase()
+  // A mask symbol only counts when it sits between/next to letters, so ordinary
+  // punctuation and maths ("2 * 3", "end.") is unaffected.
+  s = s.replace(/[*#%&°·•_~^+]/g, (ch, idx: number, whole: string) => {
+    const prev = whole[idx - 1]
+    const next = whole[idx + 1]
+    const letter = /[a-z]/
+    return (prev && letter.test(prev)) || (next && letter.test(next)) ? MASK : ch
+  })
+  s = s.replace(/(.)\1{2,}/g, '$1$1')
+  return s
+}
+
+/**
+ * Regex for a blocked word in which any single position may have been masked
+ * out: "fuck" also matches "f\x01ck". Only used for words of 4+ letters, so
+ * short entries cannot over-match.
+ */
+function maskedPattern(word: string): RegExp {
+  const body = word
+    .split('')
+    .map((ch) => `(?:${escapeRegex(ch)}|${MASK})`)
+    .join('')
+  return new RegExp(`\\b${body}\\b`, 'i')
+}
+
+/**
+ * Collapse ALL repeats so "fuuck" -> "fuck" for a second matching pass.
+ *
+ * This is applied to the TEXT only, never to the blocked word itself: collapsing
+ * "ass" to "as" made the innocent word "as" a profanity match.
+ */
 function collapseRepeats(s: string): string {
   return s.replace(/(.)\1+/g, '$1')
 }
@@ -131,13 +186,16 @@ export function checkText(raw: string, opts: SafetyOptions = {}): SafetyResult {
 
   const normalised = normalise(text)
   const collapsed = collapseRepeats(normalised)
+  const masked = maskVariant(text)
 
-  // Remove allowlisted words from BOTH passes so they can never trigger a match.
+  // Remove allowlisted words from every pass so they can never trigger a match.
   let safeNorm = normalised
   let safeCollapsed = collapsed
+  let safeMasked = masked
   for (const good of ALLOWLIST) {
     const re = new RegExp(escapeRegex(good), 'g')
     safeNorm = safeNorm.replace(re, ' ')
+    safeMasked = safeMasked.replace(re, ' ')
     safeCollapsed = safeCollapsed.replace(new RegExp(escapeRegex(collapseRepeats(good)), 'g'), ' ')
   }
 
@@ -145,9 +203,13 @@ export function checkText(raw: string, opts: SafetyOptions = {}): SafetyResult {
     const w = normalise(word)
     if (!w) continue
     // \b word boundaries stop "ass" matching inside "grass".
+    // The blocked word is used AS-IS against both the normalised text and the
+    // repeat-collapsed text. We never collapse the blocked word itself, or
+    // "ass" would shrink to "as" and flag ordinary sentences.
     const re = new RegExp(`\\b${escapeRegex(w)}\\b`, 'i')
-    const reCollapsed = new RegExp(`\\b${escapeRegex(collapseRepeats(w))}\\b`, 'i')
-    if (re.test(safeNorm) || reCollapsed.test(safeCollapsed)) {
+    // Longer words also get the masked check, catching "f*ck" / "sh#t".
+    const maskedHit = w.length >= 4 && maskedPattern(w).test(safeMasked)
+    if (re.test(safeNorm) || re.test(safeCollapsed) || maskedHit) {
       return {
         ok: false,
         reason: 'profanity',
